@@ -227,3 +227,12 @@ app_license = "agpl-3.0"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+override_whitelisted_methods = {
+    "todo_app.todo_app.api.todo.get_todos": "todo_app.todo_app.api.todo.get_todos",
+    "todo_app.todo_app.api.todo.create_todo": "todo_app.todo_app.api.todo.create_todo",
+    "todo_app.todo_app.api.todo.update_todo": "todo_app.todo_app.api.todo.update_todo",
+    "todo_app.todo_app.api.todo.delete_todo": "todo_app.todo_app.api.todo.delete_todo",
+}
+
+
+website_route_rules = [{'from_route': '/todoApp/<path:app_path>', 'to_route': 'todoApp'},]
